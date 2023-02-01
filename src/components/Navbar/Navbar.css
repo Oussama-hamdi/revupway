@@ -1,0 +1,100 @@
+/* Start Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9999;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  background: rgba(211, 211, 211, 0.21);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(211, 211, 211, 0.2);
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex: 1 0;
+}
+nav .container .links-parent {
+  flex: 1 0;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  nav .container .links-parent {
+    transform: translateX(301%);
+    position: absolute;
+    top: 71px;
+    left: -1px;
+    width: 50%;
+    height: fit-content;
+    background-color: var(--light-color);
+    border-radius: 6px;
+  }
+  nav .container .links-parent.active {
+    transition: 0.3s;
+    transform: translateX(101%);
+    display: block;
+  }
+  nav .container .links-parent .links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav .container .links-parent .links li {
+    width: 100%;
+  }
+  nav .container .links-parent .links li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+  }
+  nav .container .links-parent .links li:hover {
+    transform: translateX(5px);
+  }
+  nav .container .links-parent .social {
+    justify-content: center;
+  }
+  nav .container .burger-menu {
+    display: block;
+  }
+}
+nav .container .logo svg {
+  font-size: 24px;
+  border-radius: 50%;
+  color: var(--main-color);
+  transition: 0.3s;
+  border: none;
+  width: 2em;
+  height: 2em;
+}
+nav .container .logo:hover svg {
+  color: var(--text-color);
+}
+nav .container .links-parent ul {
+  display: flex;
+  align-items: center;
+}
+nav .container .links-parent ul li {
+  text-transform: capitalize;
+  padding: 10px;
+  transition: transform 0.3s;
+}
+nav .container .links-parent .links {
+  margin: 0 auto;
+}
+nav .container .links-parent .links li a {
+  color: var(--text-color);
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+nav .container .links-parent .links li:hover a {
+  color: var(--main-color);
+}
+nav .container .links-parent .social li a {
+  font-size: 1.3rem;
+}
+/* End Navbar */
