@@ -11,9 +11,8 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: var(--light-color);
-  height: 5000px;
-  width: 100vw;
+  background-color: #ecf2f6;
+  max-width: 100vw;
   overflow-x: hidden !important;
 }
 
@@ -123,3 +122,22 @@ nav .container .burger-menu.open span:nth-child(4) {
   left: 50%;
 }
 /* End Burger Menu */
+.animation-fix {
+  overflow-x: hidden;
+}
+/* Start Main Headings Style */
+.sub-text {
+  color: var(--main-color);
+  display: block;
+  font-weight: bold;
+}
+.main-heading {
+  margin: 20px 0;
+  font-size: 2.5rem;
+}
+@media (max-width: 767px) {
+  .main-heading {
+    font-size: 1.5rem;
+  }
+}
+/* End Headings Style */

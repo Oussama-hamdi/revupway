@@ -15,13 +15,28 @@ function Navbar() {
   const linksParentRef = useRef(null);
 
   useEffect(() => {
+    linksParentRef.current.onclick = (e) => {
+      e.stopPropagation();
+    };
     burgerMenuRef.current.onclick = (e) => {
+      e.stopPropagation();
       if (e.target.tagName === "SPAN") {
         e.target.parentElement.classList.toggle("open");
       }
       linksParentRef.current.classList.toggle("active");
       e.target.classList.toggle("open");
     };
+    document.addEventListener("click", (e) => {
+      if (
+        e.target !== burgerMenuRef.current &&
+        e.target !== linksParentRef.current
+      ) {
+        if (linksParentRef.current.classList.contains("active")) {
+          linksParentRef.current.classList.toggle("active");
+          burgerMenuRef.current.classList.toggle("open");
+        }
+      }
+    });
   }, []);
   return (
     <nav>
@@ -40,8 +55,8 @@ function Navbar() {
         <div ref={linksParentRef} className="links-parent">
           <ul className="links">
             <ListItems active={"active"} name="home" />
-            <ListItems name="service" />
             <ListItems name="about" />
+            <ListItems name="services" />
             <ListItems name="team" />
             <ListItems name="contact" />
           </ul>

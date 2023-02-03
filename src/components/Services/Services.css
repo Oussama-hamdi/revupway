@@ -1,0 +1,34 @@
+.services {
+  padding: 100px 0;
+}
+.services .container .services-heading {
+  text-align: center;
+}
+.services .container .our-services {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+.services .container .our-services .service {
+  background-color: var(--light-color);
+  padding: 20px;
+  text-align: left;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+.services .container .our-services .service:hover {
+  transform: translateY(-7px);
+}
+.services .container .our-services .service svg {
+  width: 65px;
+  height: 65px;
+  color: var(--main-color);
+}
+.services .container .our-services .service .service-title {
+  margin: 10px 0;
+}
+.services .container .our-services .service .service-info {
+  color: #777;
+}

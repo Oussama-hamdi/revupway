@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      offset: 200,
+      delay: 100,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="home" id="home">
       <div className="upper">
@@ -13,13 +24,9 @@ function Home() {
           ></path>
         </svg>
       </div>
-      <div
-        className="container"
-        data-aos="fade-down-right"
-        data-aos-duration="1500"
-      >
+      <div className="container">
         <div className="info">
-          <div className="info-title">
+          <div className="info-title" data-aos="fade-right">
             <h1>Welcome To RevUpWay</h1>
             <p>
               We Reverse <br />
@@ -28,7 +35,7 @@ function Home() {
               We go in the right way together
             </p>
           </div>
-          <div className="info-pic">
+          <div className="info-pic" data-aos="fade-left">
             <img
               src="https://reactheme.com/products/wordpress/axela/wp-content/uploads/2022/10/banner-1.png"
               alt=""

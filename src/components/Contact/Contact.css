@@ -1,0 +1,130 @@
+.contact {
+  padding: 50px 0;
+  background-color: var(--light-color);
+}
+.contact .container .contact-parent {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .contact .container .contact-parent {
+    grid-template-columns: 1fr;
+  }
+}
+.contact .container .contact-info .contact-text {
+  color: #777;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+.contact .container .contact-info .contact-mail,
+.contact .container .contact-info .contact-number {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+.contact .container .contact-info .contact-mail .svg-parent,
+.contact .container .contact-info .contact-number .svg-parent {
+  font-size: 1.5rem;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+.contact .container .contact-info .contact-mail svg,
+.contact .container .contact-info .contact-number svg {
+  color: var(--light-color);
+}
+.contact .container .contact-info .contact-mail .contact-us,
+.contact .container .contact-info .contact-number .contact-us {
+  color: #777;
+  margin-bottom: 5px;
+  display: block;
+}
+.contact .container .contact-info .contact-mail .our-contact,
+.contact .container .contact-info .contact-number .our-contact {
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.contact .container .contact-info .contact-mail .our-contact:hover,
+.contact .container .contact-info .contact-number .our-contact:hover {
+  color: var(--main-color);
+}
+.contact .container .contact-parent form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contact .container .contact-parent form > div label {
+  display: block;
+  font-weight: bold;
+  margin: 11px 0;
+}
+.contact .container .contact-parent form > div input,
+.contact .container .contact-parent form > div textarea,
+.contact .container .contact-parent form > div button {
+  display: block;
+  caret-color: var(--main-color);
+  width: 100% !important;
+  resize: none;
+  outline: none;
+  font-size: 18px;
+  color: #777;
+  border: 1px solid #777;
+  padding: 20px;
+  border-radius: 10px;
+}
+.contact .container .contact-parent form > div input:focus,
+.contact .container .contact-parent form > div textarea:focus {
+  border: 1px solid var(--main-color);
+}
+.contact .container .contact-parent form > div button {
+  margin-top: 20px;
+  cursor: pointer;
+  color: var(--light-color);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+.contact .container .contact-parent form > div button .text {
+  position: relative;
+  z-index: 100;
+}
+.contact .container .contact-parent form > div button .bg-color {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: 1;
+}
+.contact .container .contact-parent form > div button::before,
+.contact .container .contact-parent form > div button::after {
+  content: "";
+  position: absolute;
+  transition: 0.5s;
+  height: 100%;
+  width: 50%;
+  background-color: var(--text-color);
+  z-index: 2;
+}
+.contact .container .contact-parent form > div button::before {
+  left: -100%;
+  top: 0;
+}
+.contact .container .contact-parent form > div button::after {
+  right: -100%;
+  top: 0;
+}
+.contact .container .contact-parent form > div button:hover::before {
+  left: 0;
+}
+.contact .container .contact-parent form > div button:hover::after {
+  right: 0;
+}

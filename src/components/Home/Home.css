@@ -21,7 +21,7 @@
 .home .buttom {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: -1px;
 }
 
 .home .container .info {
