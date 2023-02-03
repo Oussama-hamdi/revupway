@@ -9,16 +9,17 @@ import {
   FaRegChartBar,
 } from "react-icons/fa";
 import Service from "./Service";
+import "aos/dist/aos.css";
 
 function Services() {
   return (
-    <div id="services" className="services">
+    <div id="services" className="services animation-fix">
       <div className="container">
         <div className="services-heading">
           <span className="sub-text">Our Services</span>
           <h3 className="main-heading">Service We Provide</h3>
         </div>
-        <div className="our-services">
+        <div className="our-services animation-fix" data-aos="fade-left">
           <Service icon={<FaGrinStars />} title={"Product Design"} />
           <Service icon={<FaRegChartBar />} title={"Digital Marketing"} />
           <Service icon={<FaLaptopCode />} title={"Web Development"} />

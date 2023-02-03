@@ -1,15 +1,15 @@
 import React from "react";
 import "./Contact.css";
-
+import "aos/dist/aos.css";
 import ContactInfo from "./ContactInfo";
 
 function Contact() {
   return (
-    <div className="contact" id="contact">
+    <div className="contact animation-fix" id="contact">
       <div className="container">
         <div className="contact-parent">
           <ContactInfo />
-          <form onSubmit={(e) => e.preventDefault()}>
+          <form data-aos="fade-left" onSubmit={(e) => e.preventDefault()}>
             <div className="name">
               <label>Your Name*</label>
               <input type="text" required />

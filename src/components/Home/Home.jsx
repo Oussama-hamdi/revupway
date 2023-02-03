@@ -1,18 +1,7 @@
-import React, { useEffect } from "react";
 import "./Home.css";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Home() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1500,
-      offset: 200,
-      delay: 100,
-      once: true,
-    });
-  }, []);
-
   return (
     <div className="home" id="home">
       <div className="upper">

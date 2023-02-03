@@ -1,10 +1,11 @@
 import React from "react";
 import { GrMail } from "react-icons/gr";
 import { CgPhone } from "react-icons/cg";
+import "aos/dist/aos.css";
 
 function ContactInfo() {
   return (
-    <div className="contact-info">
+    <div className="contact-info animation-fix" data-aos="fade-right">
       <span className="sub-text">Get in touch</span>
       <h3 className="main-heading">Have Any Project Plan In Your Mind?</h3>
       <p className="contact-text">
